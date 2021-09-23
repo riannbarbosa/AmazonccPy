@@ -111,9 +111,7 @@ def check_register(users):
         else:
                 users.append(register)
                 print(f"\n----𝐒𝐞𝐣𝐚 𝐛𝐞𝐦 𝐕𝐢𝐧𝐝𝐨(𝐚) {register.Nome} !----\nVocê tem um limite de 𝐑$ 𝟏.𝟎𝟎𝟎,𝟎𝟎")
-        time.sleep(1)
-                
-                
+        time.sleep(1)                      
 
 #Consulta de clientes no sistema
 def client(CPF, users):
@@ -140,9 +138,7 @@ def user_login(EMAIL,SENHA, users):
                 print("\n𝐔𝐬𝐮𝐚́𝐫𝐢𝐨 𝐨𝐮 𝐒𝐞𝐧𝐡𝐚 𝐢𝐧𝐜𝐨𝐫𝐫𝐞𝐭𝐨 :(")
         time.sleep(1)
 
-
 # --=--=-=-=-=-=-=-=- 2 - Codigo da parte de compras -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-
 
 #2 produtos     
 class Products(object):
@@ -290,7 +286,6 @@ def purchases(product, itens):
         
                 
 
-
 #função para realizar o pagamento e resetar o credito            
 def payment(itens):
         credito=1000.00
@@ -363,7 +358,6 @@ def menu() :
                         else:
                                 print("Sem Itens no carrinho :(")
                                         
-                 
                 elif opcao == '6':
                         #chama a função pagamento, se o carrinho estiver vazio chama o except
                         try:
@@ -382,21 +376,4 @@ def menu() :
 
                 else:
                         print("\n𝐎𝐩𝐜̧𝐚̃𝐨 𝐢𝐧𝐯𝐚́𝐥𝐢𝐝𝐚, 𝐭𝐞𝐧𝐭𝐞 𝐧𝐨𝐯𝐚𝐦𝐞𝐧𝐭𝐞.\n")
-
 menu()
-
-
-                       
-
-                    
-
-
-
-
-    
-
-    
-
-        
-
-
