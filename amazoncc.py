@@ -96,11 +96,10 @@ def check_register(users):
                 return check_register(users)
 
         #verifica a senha possui de 3 a 6 digitos
-        elif len(register.Senha)>6:
-                print("\n*𝐀 𝐬𝐞𝐧𝐡𝐚 𝐞́ 𝐝𝐞 𝐧𝐨 𝐦𝐚́𝐱𝐢𝐦𝐨 𝟔 𝐝𝐢́𝐠𝐢𝐭𝐨𝐬\n\n")
-                return check_register(users)
-        elif len(register.Senha)<=3:
-                print("\n*𝐀 𝐬𝐞𝐧𝐡𝐚 𝐞́ 𝐦𝐮𝐢𝐭𝐨 𝐜𝐮𝐫𝐭𝐚\n\n")
+        elif len(register.Senha) < 6 :
+                print("\n*𝐀 𝐬𝐞𝐧𝐡𝐚 𝐝𝐞𝐯𝐞 𝐜𝐨𝐧𝐭𝐞𝐫 𝟔 𝐝𝐢́𝐠𝐢𝐭𝐨𝐬\n\n")
+        elif len(register.Senha) > 6:
+                print("\n*𝐀 𝐬𝐞𝐧𝐡𝐚 𝐝𝐞𝐯𝐞 𝐜𝐨𝐧𝐭𝐞𝐫 𝟔 𝐝𝐢́𝐠𝐢𝐭𝐨𝐬\n\n")
                 return check_register(users)
 
         # Expressao regular para validar nome com apenas letras e espaçamento
