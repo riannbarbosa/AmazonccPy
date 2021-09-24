@@ -96,8 +96,9 @@ def check_register(users):
                 return check_register(users)
 
         #verifica a senha possui de 3 a 6 digitos
-        elif len(register.Senha) < 6 :
+        elif len(register.Senha) < 6:
                 print("\n*𝐀 𝐬𝐞𝐧𝐡𝐚 𝐝𝐞𝐯𝐞 𝐜𝐨𝐧𝐭𝐞𝐫 𝟔 𝐝𝐢́𝐠𝐢𝐭𝐨𝐬\n\n")
+                return check_register(users)
         elif len(register.Senha) > 6:
                 print("\n*𝐀 𝐬𝐞𝐧𝐡𝐚 𝐝𝐞𝐯𝐞 𝐜𝐨𝐧𝐭𝐞𝐫 𝟔 𝐝𝐢́𝐠𝐢𝐭𝐨𝐬\n\n")
                 return check_register(users)
@@ -110,7 +111,9 @@ def check_register(users):
         else:
                 users.append(register)
                 print(f"\n----𝐒𝐞𝐣𝐚 𝐛𝐞𝐦 𝐕𝐢𝐧𝐝𝐨(𝐚) {register.Nome} !----\nVocê tem um limite de 𝐑$ 𝟏.𝟎𝟎𝟎,𝟎𝟎")
-        time.sleep(1)                      
+        time.sleep(1)
+                
+                
 
 #Consulta de clientes no sistema
 def client(CPF, users):
@@ -137,7 +140,9 @@ def user_login(EMAIL,SENHA, users):
                 print("\n𝐔𝐬𝐮𝐚́𝐫𝐢𝐨 𝐨𝐮 𝐒𝐞𝐧𝐡𝐚 𝐢𝐧𝐜𝐨𝐫𝐫𝐞𝐭𝐨 :(")
         time.sleep(1)
 
+
 # --=--=-=-=-=-=-=-=- 2 - Codigo da parte de compras -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
 
 #2 produtos     
 class Products(object):
@@ -147,27 +152,28 @@ class Products(object):
         def __repr__(self):
                 return "name: %s value: %d" % (self.name, self.value)
 
+if __name__ == "__main__":
 
-arroz_1kg = Products("Arroz Branco 1kg", 6.50 ) 
-arroz_integral = Products("Arroz Integral 1kg", 7.50)
-creme_dental = Products("Creme Dental", 5)
-acucar_refinado = Products("Açúcar Refinado 1kg", 4.50)
-mouse_gamer = Products("Mouse Gamer FULL RGB", 65.00)
-borracha = Products("Borracha", 5.00)
-gabinete_rgb = Products("Gabinete RGB", 300.00)
-pasta_termica = Products("Pasta Térmica", 35.00)
-fonte_600 = Products("Fonte 600W", 300.00)
-feijao_1kg = Products("Feijão 1kg", 5.00)
-fita_led = Products("Fita Led", 50.00)
-hdd_1tb = Products("HDD 1TB", 270.00)
-ssd_250GB = Products("SSD 250GB", 250.00)
-vassoura = Products("Vassoura", 15.00)
-ssd_120GB = Products("SSD 120GB", 180.00)
-processadori3 = Products("Processador i3", 750.00)
-refrigerante = Products("Refrigerante", 9.00)
-windows_xp = Products("Windows XP Pro", 100.00)
-caderno = Products("Caderno", 15.00)
-celular = Products("Seusung Pro Max 300gb", 500.00)
+        arroz_1kg = Products("Arroz Branco 1kg", 6.50 ) 
+        arroz_integral = Products("Arroz Integral 1kg", 7.50)
+        creme_dental = Products("Creme Dental", 5)
+        acucar_refinado = Products("Açúcar Refinado 1kg", 4.50)
+        mouse_gamer = Products("Mouse Gamer FULL RGB", 65.00)
+        borracha = Products("Borracha", 5.00)
+        gabinete_rgb = Products("Gabinete RGB", 300.00)
+        pasta_termica = Products("Pasta Térmica", 35.00)
+        fonte_600 = Products("Fonte 600W", 300.00)
+        feijao_1kg = Products("Feijão 1kg", 5.00)
+        fita_led = Products("Fita Led", 50.00)
+        hdd_1tb = Products("HDD 1TB", 270.00)
+        ssd_250GB = Products("SSD 250GB", 250.00)
+        vassoura = Products("Vassoura", 15.00)
+        ssd_120GB = Products("SSD 120GB", 180.00)
+        processadori3 = Products("Processador i3", 750.00)
+        refrigerante = Products("Refrigerante", 9.00)
+        windows_xp = Products("Windows XP Pro", 100.00)
+        caderno = Products("Caderno", 15.00)
+        celular = Products("Seusung Pro Max 300gb", 500.00)
 
 
 #mostra os produtos no sistema
@@ -285,6 +291,7 @@ def purchases(product, itens):
         
                 
 
+
 #função para realizar o pagamento e resetar o credito            
 def payment(itens):
         credito=1000.00
@@ -314,7 +321,7 @@ def menu() :
         itens=[]
         product=[arroz_1kg, arroz_integral, creme_dental, acucar_refinado, mouse_gamer, borracha, gabinete_rgb, pasta_termica, fonte_600, feijao_1kg, fita_led, hdd_1tb, ssd_250GB, vassoura, ssd_120GB, processadori3, refrigerante, windows_xp, caderno, celular]
         while True:
-                opcao = input("\n--------𝑨𝒎𝒂𝒛𝒐𝒏𝑪𝑪 𝑺𝒕𝒐𝒓𝒆--------\n\n\n 𝘗𝘳𝘦𝘤̧𝘰𝘴 𝘪𝘯𝘤𝘳𝘪́𝘷𝘦𝘪𝘴 𝘦́ 𝑎𝑝𝑒𝑛𝑎𝑠 𝘢𝘲𝘶𝘪!\n\n\n-------------MENU-------------\n\n Cadastre-se e confirme sua\n    conta fazendo login!!\n\nOPÇÕES:\n\n1- Cadastro\n2- Login\n3- Consultar Cliente\n4- Comprar\n5- Carrinho de compras\n6- Pagamento \n7- Produtos\n0- Sair\n\n")
+                opcao = input("\n--------𝑨𝒎𝒂𝒛𝒐𝒏𝑪𝑪 𝑺𝒕𝒐𝒓𝒆--------\n\n\n 𝘗𝘳𝘦𝘤̧𝘰𝘴 𝘪𝘯𝘤𝘳𝘪́𝘷𝘦𝘪𝘴 𝘦́ 𝑎𝑝𝑒𝑛𝑎𝑠 𝘢𝘲𝘶𝘪!\n\n\n-------------MENU-------------\n\n  Cadastre-se ou faça login !\n\nOPÇÕES:\n\n1- Cadastro\n2- Login\n3- Consultar Cliente\n4- Comprar\n5- Carrinho de compras\n6- Pagamento \n7- Produtos\n0- Sair\n\n")
                 if opcao == '1':
                         print("------CADASTRO DE CLIENTES------\n")
                         check_register(users)
@@ -357,6 +364,7 @@ def menu() :
                         else:
                                 print("Sem Itens no carrinho :(")
                                         
+                 
                 elif opcao == '6':
                         #chama a função pagamento, se o carrinho estiver vazio chama o except
                         try:
